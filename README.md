@@ -1,26 +1,27 @@
-samson-HNG-stage-zero
-A simple, production-ready REST API built with Go that provides a basic response when given a name. This project serves as the Stage 0 task for the HNG Internship.
+# samson-HNG-stage-zero
 
-🛠 Tech Stack
-Language: Go (Golang)
+A simple, production-ready **REST API** built with **Go** that provides a basic response when given a name. This project serves as the **Stage 0** task for the **HNG Internship**.
 
-Tooling: None (Zero external dependencies/frameworks for simplicity and speed).
+---
 
-Hosting: Railway
+### 🛠 Tech Stack
 
-Version Control: Git & GitHub
+* **Language:** Go (Golang)
+* **Tooling:** None (Zero external dependencies/frameworks for simplicity and speed).
+* **Hosting:** [Railway](https://railway.app/)
+* **Version Control:** Git & GitHub
 
-📡 API Endpoint
-Classify Name
+---
+
+### 📡 API Endpoint
+
+#### Classify Name
 Returns a classification response based on the provided name parameter.
 
-URL: /classify
+* **URL:** `/classify`
+* **Method:** `GET`
+* **Query Parameter:** `name=[string]`
 
-Method: GET
-
-Query Parameter: name=[string]
-
-Example Request:
-
-Bash
+**Example Request:**
+```bash
 GET /classify?name=Samson
