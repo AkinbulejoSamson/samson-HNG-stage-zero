@@ -19,8 +19,13 @@ func main() {
 
 	genderRouter := route.SetupGenderRoutes(genderService)
 
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
 	server := &http.Server{
-		Addr:         ":8080",
+		Addr:         ":" + port,
 		Handler:      genderRouter,
 		ReadTimeout:  5 * time.Second,
 		WriteTimeout: 5 * time.Second,
