@@ -12,7 +12,7 @@ func SetupGenderRoutes(genderService service.GenderService) *http.ServeMux {
 	genderHandler := handler.NewGenderHandler(genderService)
 
 	//routes
-	genderMux.HandleFunc("GET /classify", genderHandler.ClassifyName)
+	genderMux.HandleFunc("GET /api/classify", genderHandler.ClassifyName)
 
 	return genderMux
 }
